@@ -849,7 +849,7 @@ export default function Page() {
               </div>
 
               {/* Central Circle with Image - CHANGE: Adjusted size for better proportion */}
-              <div className="absolute inset-0 flex items-center justify-center transform -translate-y-32">
+              <div className="absolute inset-0 flex items-center justify-center transform -translate-y-0">
                 <div className="w-96 h-96 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-blue-600 relative overflow-hidden">
                   <img
                     src="/modern-technology-servers-data-center-with-blue-li.png"
