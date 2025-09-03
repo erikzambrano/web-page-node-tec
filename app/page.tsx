@@ -1,9 +1,6 @@
 "use client"
 
 import Header from "../components/header"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import Link from "next/link"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import Footer from "@/components/footer"
 import Banner from "@/components/banner"
@@ -12,6 +9,7 @@ import Strategic from "@/components/strategic"
 import Services from "@/components/services"
 import Industries from "@/components/industries"
 import Objective from "@/components/objective"
+import Partners from "@/components/partners"
 
 export default function Page() {
 
@@ -33,6 +31,9 @@ export default function Page() {
 
             {/* Industries Section - Redesigned with clean, minimalist style inspired by reference image */}
             <Industries />
+
+            {/* Partners Section */}
+            <Partners />
 
             {/* Company Objective Section - CHANGE: Updated background to use logo's blue base color with subtle geometric pattern */}
             <Objective />

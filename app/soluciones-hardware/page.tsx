@@ -105,9 +105,9 @@ export default function SolucionesHardware() {
               <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Solicitar Cotización
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              {/* <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Ver Catálogo
-              </button>
+              </button> */}
             </div>
           </motion.div>
         </div>
