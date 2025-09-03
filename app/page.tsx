@@ -1,9 +1,6 @@
 "use client"
 
 import Header from "../components/header"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import Link from "next/link"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import Footer from "@/components/footer"
 import Banner from "@/components/banner"
