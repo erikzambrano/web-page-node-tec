@@ -1,0 +1,24 @@
+# Definición de servicios
+services:
+  # Servicio llamado 'services'
+  services:
+    # Configuración para construir la imagen del contenedor
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Nombre de la imagen resultante
+    image: app-image
+    # Conexión a la red llamada 'luis'
+    networks:
+      - luis
+    # Nombre del contenedor
+    container_name: app
+    # Configuración para reiniciar siempre el contenedor
+    restart: always
+
+# Definición de redes
+networks:
+  # Definición de la red llamada 'luis'
+  luis:
+    # Especifica que la red es externa (puede haber sido creada fuera de este archivo)
+    external: true
