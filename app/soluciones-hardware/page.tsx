@@ -1,8 +1,9 @@
 "use client"
-
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowLeft, Monitor, Server, Laptop, Printer, Network, Shield, Wrench, Phone } from "lucide-react"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowLeft, Monitor, Server, Laptop, Printer, Network, Shield, Wrench, Phone } from "lucide-react";
 
 export default function SolucionesHardware() {
   const hardwareCategories = [
@@ -45,7 +46,7 @@ export default function SolucionesHardware() {
       icon: Shield,
       features: ["Respaldo automático", "UPS empresariales", "Seguridad física", "Recuperación de datos"],
     },
-  ]
+  ];
 
   const services = [
     {
@@ -64,14 +65,23 @@ export default function SolucionesHardware() {
       title: "Mantenimiento Preventivo",
       description: "Programas de mantenimiento para garantizar el óptimo funcionamiento.",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <Header />
+
+       {/* Header spacer to prevent content overlap */}
+            <div className="header-spacer"></div>
+
       {/* Header with back button */}
       <div className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+          <Link
+            href="/"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+          >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Volver al inicio
           </Link>
@@ -112,7 +122,6 @@ export default function SolucionesHardware() {
               Ofrecemos una amplia gama de equipos tecnológicos para satisfacer todas sus necesidades empresariales
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {hardwareCategories.map((category, index) => (
               <motion.div
@@ -138,9 +147,6 @@ export default function SolucionesHardware() {
                     </li>
                   ))}
                 </ul>
-                <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors">
-                  Más Información
-                </button>
               </motion.div>
             ))}
           </div>
@@ -154,7 +160,6 @@ export default function SolucionesHardware() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Servicios Complementarios</h2>
             <p className="text-xl text-gray-600">Más que equipos, ofrecemos soluciones integrales</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <motion.div
@@ -214,6 +219,9 @@ export default function SolucionesHardware() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
-  )
+  );
 }

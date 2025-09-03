@@ -4,9 +4,10 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'NODE TEC',
+  description: 'Empresa de TIC en Perú con experiencia en la industria',
+  keywords: 'NODE TEC, Empresa de TIC en Perú, Tecnología de la Información, TIC, Perú, Ingeniería de Software, Desarrollo Web, Consultoría, Soporte Técnico, Masa & Miga',
+  generator: 'syssoftintegra.com',
 }
 
 export default function RootLayout({
