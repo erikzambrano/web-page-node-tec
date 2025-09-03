@@ -15,6 +15,10 @@ export default function Banner() {
             src: "/data-online-technology-internet-circuit-board-concept.jpg",
             alt: "Visualización avanzada de redes neuronales e inteligencia artificial",
         },
+        {
+            src: "/cloud-computing-infrastructure-servers-digital.png",
+            alt: "Visualización avanzada de redes neuronales e inteligencia artificial",
+        },
         // {
         //   src: "/advanced-ai-neural-network-visualization-with-glow.png",
         //   alt: "Visualización avanzada de redes neuronales e inteligencia artificial",

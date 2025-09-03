@@ -1,5 +1,34 @@
 import Link from "next/link";
 
+// Datos de los enlaces del footer
+const serviciosLinks = [
+  { name: "Equipos de computo", href: "#" },
+  { name: "Audio y video Profesional", href: "#" },
+  { name: "Soluciones de impresión", href: "#" },
+  { name: "Software y Licencias", href: "#" },
+  { name: "Redes y comunicaciones", href: "#" },
+  { name: "Seguridad e Informatica", href: "#" },
+];
+
+const industriasLinks = [
+  { name: "Manufactura", href: "#" },
+  { name: "Construcción", href: "#" },
+  { name: "Educación", href: "#" },
+  { name: "Entretenimiento", href: "#" },
+  { name: "Financiero", href: "#" },
+  { name: "Libro de Reclamaciones", href: "#" },
+  { name: "Logística", href: "#" },
+  { name: "Retail", href: "#" },
+];
+
+const contactoInfo = [
+  { name: "Contáctenos", href: "/soluciones-hardware" },
+  { name: "contacto@nodetec.com.pe", href: "mailto:contacto@nodetec.com.pe" },
+  { name: "soporte@nodetec.com.pe", href: "mailto:soporte@nodetec.com.pe" },
+  { name: "Lima, Perú", isLink: false },
+  { name: "Atención 24/7", isLink: false },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -18,27 +47,20 @@ export default function Footer() {
                   loading="lazy"
                 />
                 <p className="text-gray-400 leading-relaxed">
-                  Conéctanos hoy para transformar el mañana
+                  "Conéctanos hoy para transformar el mañana"
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Enlaces de Servicios */}
+          {/* Enlaces */}
           <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+            {/* Servicios */}
             <div>
               <h5 className="text-lg font-semibold mb-4">Servicios</h5>
               <ul className="space-y-2 text-gray-400">
-                {[
-                  { name: "Archiving", href: "#" },
-                  { name: "Diseño e Implementación", href: "#" },
-                  { name: "Respaldo", href: "#" },
-                  { name: "Migración y Actualización", href: "#" },
-                  { name: "Virtualización", href: "#" },
-                  { name: "Red (Networking)", href: "#" },
-                  { name: "IAAS", href: "#" },
-                ].map((service, index) => (
-                  <li key={index}>
+                {serviciosLinks.map((service, index) => (
+                  <li key={`service-${index}`}>
                     <Link
                       href={service.href}
                       className="hover:text-white transition-colors"
@@ -50,21 +72,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Enlaces de Industrias */}
+            {/* Industrias */}
             <div>
               <h5 className="text-lg font-semibold mb-4">Industrias</h5>
               <ul className="space-y-2 text-gray-400">
-                {[
-                  { name: "Manufactura", href: "#" },
-                  { name: "Construcción", href: "#" },
-                  { name: "Educación", href: "#" },
-                  { name: "Entretenimiento", href: "#" },
-                  { name: "Financiero", href: "#" },
-                  { name: "Libro de Reclamaciones", href: "#" },
-                  { name: "Logística", href: "#" },
-                  { name: "Retail", href: "#" },
-                ].map((industry, index) => (
-                  <li key={index}>
+                {industriasLinks.map((industry, index) => (
+                  <li key={`industry-${index}`}>
                     <Link
                       href={industry.href}
                       className="hover:text-white transition-colors"
@@ -76,40 +89,24 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Información de Contacto */}
+            {/* Contacto */}
             <div>
               <h5 className="text-lg font-semibold mb-4">Contacto</h5>
               <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link
-                    href="/soluciones-hardware"
-                    className="hover:text-white transition-colors"
-                  >
-                    Contáctenos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="mailto:contacto@nodetec.com.pe"
-                    className="hover:text-white transition-colors"
-                  >
-                    contacto@nodetec.com.pe
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="mailto:soporte@nodetec.com.pe"
-                    className="hover:text-white transition-colors"
-                  >
-                    soporte@nodetec.com.pe
-                  </Link>
-                </li>
-                <li>
-                  <span className="text-gray-400">Lima, Perú</span>
-                </li>
-                <li>
-                  <span className="text-gray-400">Atención 24/7</span>
-                </li>
+                {contactoInfo.map((info, index) => (
+                  <li key={`contact-${index}`}>
+                    {info.isLink === false ? (
+                      <span>{info.name}</span>
+                    ) : (
+                      <Link
+                        href={info.href!}
+                        className="hover:text-white transition-colors"
+                      >
+                        {info.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

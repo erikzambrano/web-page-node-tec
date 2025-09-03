@@ -206,11 +206,11 @@ export default function SolucionesHardware() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="text-lg font-bold mb-2">Teléfono</h3>
-              <p className="text-gray-300">+51 1 234-5678</p>
+              <p className="text-gray-300">+51 959 768 166</p>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-2">Email</h3>
-              <p className="text-gray-300">ventas@nodetec.com.pe</p>
+              <p className="text-gray-300">contacto@nodetec.com.pe</p>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-2">Ubicación</h3>

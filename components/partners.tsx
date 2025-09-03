@@ -3,118 +3,49 @@ import { motion } from "framer-motion";
 
 export default function Partners() {
   const partnerLogos = [
-    {
-      name: "Apple",
-      logo: (
-        <div className="flex flex-col items-center">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png"
-            alt="Apple"
-            className="h-12 w-auto"
-          />
-          <span className="text-xs text-gray-500 mt-1">Authorized Corporate Reseller</span>
-        </div>
-      ),
-    },
-    {
-      name: "Lenovo",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lenovo_logo_2015.svg/1200px-Lenovo_logo_2015.svg.png"
-          alt="Lenovo"
-          className="h-12 w-auto"
-        />
-      ),
-    },
+
+
     {
       name: "HP",
       logo: (
+      <div className="flex flex-col items-center">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/HP_logo_2012.svg/1200px-HP_logo_2012.svg.png"
+          src="https://lkc.hp.com/themes/hp-lkc/assets/images/logo-hp.png"
           alt="HP"
           className="h-12 w-auto"
         />
+        <span className="text-xs text-gray-500 mt-1">Solutions Partner</span>
+        </div>
       ),
     },
     {
       name: "Microsoft",
       logo: (
-        <div className="flex flex-col items-center">
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png"
             alt="Microsoft"
             className="h-12 w-auto"
           />
-          <span className="text-xs text-gray-500 mt-1">Solutions Partner</span>
-        </div>
+
       ),
     },
     {
-      name: "Adobe",
+      name: "Huawei",
       logo: (
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Adobe_Corporate_Logo.svg/1200px-Adobe_Corporate_Logo.svg.png"
-          alt="Adobe"
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Huawei_Standard_logo.svg/1200px-Huawei_Standard_logo.svg.png"
+          alt="Huawei"
           className="h-12 w-auto"
         />
       ),
     },
     {
-      name: "Fujitsu",
+      name: "Brother",
       logo: (
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Fujitsu_logo_2020.svg/1200px-Fujitsu_logo_2020.svg.png"
-          alt="Fujitsu"
-          className="h-12 w-auto"
-        />
-      ),
-    },
-    {
-      name: "Sony",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sony_logo.svg/1200px-Sony_logo.svg.png"
-          alt="Sony"
-          className="h-12 w-auto"
-        />
-      ),
-    },
-    {
-      name: "WatchGuard",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/WatchGuard_Logo.svg/1200px-WatchGuard_Logo.svg.png"
-          alt="WatchGuard"
-          className="h-12 w-auto"
-        />
-      ),
-    },
-    {
-      name: "Ruckus",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ruckus_Wireless_logo.svg/1200px-Ruckus_Wireless_logo.svg.png"
-          alt="Ruckus"
-          className="h-12 w-auto"
-        />
-      ),
-    },
-    {
-      name: "Blackmagic Design",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Blackmagic_Design_logo.svg/1200px-Blackmagic_Design_logo.svg.png"
-          alt="Blackmagic Design"
-          className="h-12 w-auto"
-        />
-      ),
-    },
-    {
-      name: "Epson",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Epson_logo.svg/1200px-Epson_logo.svg.png"
-          alt="Epson"
+          src="https://logodownload.org/wp-content/uploads/2019/12/brother-logo-4.png"
+          alt="Brother"
           className="h-12 w-auto"
         />
       ),
@@ -123,7 +54,7 @@ export default function Partners() {
       name: "ViewSonic",
       logo: (
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/ViewSonic_logo.svg/1200px-ViewSonic_logo.svg.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b0/ViewSonic_logo.svg"
           alt="ViewSonic"
           className="h-12 w-auto"
         />
