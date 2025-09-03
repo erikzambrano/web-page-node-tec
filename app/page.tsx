@@ -11,17 +11,25 @@ export default function Page() {
 
   const techImages = [
     {
-      src: "/advanced-ai-neural-network-visualization-with-glow.png",
+      src: "/advanced-ai-neural-network-visualization-with-glow.webp",
       alt: "Visualización avanzada de redes neuronales e inteligencia artificial",
     },
     {
-      src: "/cloud-computing-infrastructure-servers-digital.png",
-      alt: "Infraestructura de computación en la nube y servidores digitales",
+      src: "/data-online-technology-internet-circuit-board-concept.jpg",
+      alt: "Visualización avanzada de redes neuronales e inteligencia artificial",
     },
-    {
-      src: "/cybersecurity-digital-shield-network-protection.png",
-      alt: "Ciberseguridad y protección digital de redes empresariales",
-    },
+    // {
+    //   src: "/advanced-ai-neural-network-visualization-with-glow.png",
+    //   alt: "Visualización avanzada de redes neuronales e inteligencia artificial",
+    // },
+    // {
+    //   src: "/cloud-computing-infrastructure-servers-digital.png",
+    //   alt: "Infraestructura de computación en la nube y servidores digitales",
+    // },
+    // {
+    //   src: "/cybersecurity-digital-shield-network-protection.png",
+    //   alt: "Ciberseguridad y protección digital de redes empresariales",
+    // },
   ]
 
   useEffect(() => {
@@ -42,6 +50,9 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+
+      {/* Header spacer to prevent content overlap */}
+      <div className="header-spacer"></div>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 relative overflow-hidden h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh]">
@@ -67,7 +78,7 @@ export default function Page() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-start px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 h-full">
+        <div className="relative z-10 flex items-center justify-start px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-8 sm:pb-10 md:pb-12 h-full">
           <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 lg:gap-12">
             <motion.div
               className="text-left text-white max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-2xl"
@@ -105,7 +116,7 @@ export default function Page() {
                     textShadow: { duration: 0.2 },
                   },
                 }}
-                style={{ transformStyle: "preserve_3d" }}
+                style={{ transformStyle: "preserve-3d" }}
               >
                 TRANSFORMAMOS PROCESOS EN VENTAJAS
               </motion.h1>
@@ -129,7 +140,7 @@ export default function Page() {
                     ease: "easeOut",
                   },
                 }}
-                style={{ transformStyle: "preserve_3d" }}
+                style={{ transformStyle: "preserve-3d" }}
               >
                 Innovación para tu crecimiento
               </motion.p>
@@ -152,7 +163,7 @@ export default function Page() {
                     ease: "easeOut",
                   },
                 }}
-                style={{ transformStyle: "preserve_3d" }}
+                style={{ transformStyle: "preserve-3d" }}
               >
                 Transformamos ideas en soluciones tecnológicas que impulsan el éxito de tu negocio
               </motion.p>
@@ -183,7 +194,7 @@ export default function Page() {
                     rotateZ: -1,
                     transition: { duration: 0.1 },
                   }}
-                  style={{ transformStyle: "preserve_3d" }}
+                  style={{ transformStyle: "preserve-3d" }}
                   className="w-full sm:w-auto"
                 >
                   <Button
@@ -210,7 +221,7 @@ export default function Page() {
                     rotateZ: 1,
                     transition: { duration: 0.1 },
                   }}
-                  style={{ transformStyle: "preserve_3d" }}
+                  style={{ transformStyle: "preserve-3d" }}
                   className="w-full sm:w-auto"
                 >
                   <motion.div
@@ -264,9 +275,8 @@ export default function Page() {
             <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors touch-manipulation ${
-                index === currentSlide ? "bg-white" : "bg-white/50"
-              }`}
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors touch-manipulation ${index === currentSlide ? "bg-white" : "bg-white/50"
+                }`}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
               animate={{
@@ -852,7 +862,7 @@ export default function Page() {
               <div className="absolute inset-0 flex items-center justify-center transform -translate-y-0">
                 <div className="w-96 h-96 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-blue-600 relative overflow-hidden">
                   <img
-                    src="/modern-technology-servers-data-center-with-blue-li.png"
+                    src="/cybersecurity-digital-shield-network-protection.png"
                     alt="Tecnología y servicios TI"
                     className="w-full h-full rounded-full object-cover"
                   />

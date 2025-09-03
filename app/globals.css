@@ -123,3 +123,60 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom styles for mobile header optimization */
+@layer components {
+  /* Ensure proper spacing for fixed header on mobile */
+  .header-spacer {
+    height: 4rem; /* 64px for mobile */
+  }
+  
+  @media (min-width: 640px) {
+    .header-spacer {
+      height: 5rem; /* 80px for sm breakpoint */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .header-spacer {
+      height: 6rem; /* 96px for md breakpoint */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .header-spacer {
+      height: 7rem; /* 112px for lg breakpoint */
+    }
+  }
+  
+  /* Mobile header optimizations */
+  @media (max-width: 1023px) {
+    .mobile-header {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  /* Smooth transitions for header height changes */
+  .header-height-transition {
+    transition: height 0.3s ease-in-out;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { useMobile } from "@/hooks/use-mobile"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDarkBackground, setIsDarkBackground] = useState(true)
+  const { isMobile, headerHeight } = useMobile()
 
   const menuItems = [
     { name: "Inicio", href: "#" },
@@ -27,21 +29,28 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Close mobile menu when switching to desktop
+  useEffect(() => {
+    if (!isMobile && isMenuOpen) {
+      setIsMenuOpen(false)
+    }
+  }, [isMobile, isMenuOpen])
+
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-md border-b border-white/30 shadow-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-md border-b border-white/30 shadow-sm mobile-header header-height-transition"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24 lg:h-28">
           {/* Logo */}
           <motion.div className="flex items-center" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/NODE%20TEC%20Color%202%20%281%29-IHr26i7oBTPjQjugvEXVVg5g001guc.png"
               alt="NODE TEC Logo"
-              className="h-20 w-auto"
+              className="h-12 w-auto sm:h-16 md:h-18 lg:h-20"
             />
           </motion.div>
 
@@ -62,7 +71,7 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className={`flex items-center ${isDarkBackground ? "text-white hover:text-cyan-300" : "text-gray-900 hover:text-blue-600"} font-semibold text-xl transition-colors duration-300 py-2 drop-shadow-sm`}
+                  className={`flex items-center text-gray-900 hover:text-blue-600 font-semibold text-xl transition-colors duration-300 py-2 drop-shadow-sm`}
                 >
                   {item.name}
                   {item.hasDropdown && <ChevronDown className="ml-1 w-4 h-4" />}
