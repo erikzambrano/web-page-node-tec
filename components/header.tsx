@@ -23,7 +23,7 @@ const Header = () => {
   }
 
   const menuItems = [
-    { name: "Inicio", href: "#" },
+    { name: "Inicio", href: "/" },
     { name: "Soluciones TI", href: "/soluciones-hardware" },
     { name: "Servicios", href: "#servicios", hasDropdown: true },
     { name: "Sobre Nosotros", href: "#about" },
