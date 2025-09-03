@@ -61,7 +61,7 @@ const Header = () => {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/NODE%20TEC%20Color%202%20%281%29-IHr26i7oBTPjQjugvEXVVg5g001guc.png"
               alt="NODE TEC Logo"
-              className="h-12 w-auto sm:h-16 md:h-18 lg:h-20"
+              className="h-12 w-auto sm:h-14 md:h-16 lg:h-18"
             />
           </motion.div>
 
@@ -82,7 +82,7 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className={`flex items-center text-gray-900 hover:text-blue-600 font-semibold text-xl transition-colors duration-300 py-2 drop-shadow-sm`}
+                  className={`flex items-center text-gray-900 hover:text-blue-600 font-semibold text-base transition-colors duration-300 py-2`}
                 >
                   {item.name}
                   {item.hasDropdown && <ChevronDown className="ml-1 w-4 h-4" />}
@@ -146,7 +146,7 @@ const Header = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </motion.button>
         </div>
 

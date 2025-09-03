@@ -1,8 +1,9 @@
 "use client"
-
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function EquiposComputoPage() {
   const computerTypes = [
@@ -76,14 +77,24 @@ export default function EquiposComputoPage() {
         </svg>
       ),
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
+      <Header />
+
+      {/* Header spacer to prevent content overlap */}
+      <div className="header-spacer"></div>
+
+      {/* Header Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Equipos de Cómputo</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Da vida a tus ideas con las herramientas que necesitas. Descubre las mejores marcas de equipos
@@ -119,12 +130,6 @@ export default function EquiposComputoPage() {
                           Solicitar Cotización
                         </Button>
                       </Link>
-                      <Button
-                        variant="outline"
-                        className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-8 py-3 text-lg bg-transparent"
-                      >
-                        Más Información
-                      </Button>
                     </div>
                   </div>
                   <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
@@ -170,6 +175,9 @@ export default function EquiposComputoPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
-  )
+  );
 }
