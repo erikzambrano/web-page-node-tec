@@ -16,7 +16,6 @@ const Header = () => {
     { name: "Servicios", href: "#servicios", hasDropdown: true },
     { name: "Sobre Nosotros", href: "#about" },
     { name: "Proyectos", href: "#proyectos" },
-    { name: "Contacto", href: "#contacto" },
   ]
 
   useEffect(() => {
@@ -123,7 +122,7 @@ const Header = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/soluciones-hardware")}
+            onClick={() => (window.location.href = "/")}
           >
             Contáctenos
           </motion.button>
