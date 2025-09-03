@@ -10,6 +10,18 @@ const Header = () => {
   const [isDarkBackground, setIsDarkBackground] = useState(true)
   const { isMobile, headerHeight } = useMobile()
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contacto')
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    // Cerrar el menú móvil si está abierto
+    setIsMenuOpen(false)
+  }
+
   const menuItems = [
     { name: "Inicio", href: "#" },
     { name: "Soluciones TI", href: "/soluciones-hardware" },
@@ -122,14 +134,14 @@ const Header = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/")}
+            onClick={scrollToContact}
           >
             Contáctenos
           </motion.button>
 
           {/* Mobile Menu Button */}
           <motion.button
-            className={`lg:hidden p-2 ${isDarkBackground ? "text-white hover:text-cyan-300" : "text-gray-900 hover:text-blue-600"} transition-colors duration-300`}
+            className={`lg:hidden p-2 text-gray-900 hover:text-blue-600 transition-colors duration-300`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -171,7 +183,7 @@ const Header = () => {
               transition={{ delay: 0.5, duration: 0.3 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => (window.location.href = "/soluciones-hardware")}
+              onClick={scrollToContact}
             >
               Contáctenos
             </motion.button>
