@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)
   const phoneNumber = "51959768166" // Reemplazar con el número real
-  const message = "Hola, me gustaría hacer una consulta sobre Masa & Miga."
+  const message = "Hola, me gustaría hacer una cotización."
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
