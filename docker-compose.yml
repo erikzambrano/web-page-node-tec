@@ -7,12 +7,12 @@ services:
       context: .
       dockerfile: Dockerfile
     # Nombre de la imagen resultante
-    image: app-image
+    image: app-web-image
     # Conexión a la red llamada 'luis'
     networks:
       - luis
     # Nombre del contenedor
-    container_name: app
+    container_name: app-web
     # Configuración para reiniciar siempre el contenedor
     restart: always
 
